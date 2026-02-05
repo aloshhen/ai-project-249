@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply antialiased bg-slate-950 text-white;
+  }
+  
+  ::selection {
+    @apply bg-lime-400 text-slate-950;
+  }
+}
+
+@layer components {
+  .vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+  
+  .mobile-safe-container {
+    @apply w-full max-w-full overflow-x-hidden;
+  }
+  
+  .telegram-safe-bottom {
+    @apply pb-24;
+  }
+  
+  .geometric-border {
+    @apply border border-white/10 hover:border-lime-400/50 transition-colors duration-300;
+  }
+  
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
